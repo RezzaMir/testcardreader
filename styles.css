@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 19px;
+  line-height: 1.5;
+  color: #24292e;
+  background-color: #ebe9e9;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 72px;
+  position: relative;
+  z-index: 9;
+}
+
+header nav a {
+  text-decoration: none; /* Remove default underline */
+  color: #000; /* Set your desired text color */
+  transition: text-decoration 0.3s ease; /* Smooth transition for the underline */
+}
+
+/* Underline effect on hover */
+header nav a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  text-decoration-color: #007bff; /* Optional: Set a specific color for the underline */
+  text-decoration-thickness: 2.5px; /* Optional: Set the thickness of the underline */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 50%;
+  background-color: white;
+  border: 2px solid orange;
+  border-radius: 50px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  outline: none;
+  font-size: 18px;
+}
+
+.search-bar select {
+  border: none;
+  border-left: 1px solid orange;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: transparent;
+  outline: none;
+  font-size: 17px;
+}
+
+.card-readers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #afb2a4;
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions a {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.actions a:hover {
+  background-color: #0206c3;
+}
+
+/* Footer Decoration */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}
+/* End: Footer Decoration */
