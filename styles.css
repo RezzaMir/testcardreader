@@ -77,7 +77,7 @@ main {
   flex-grow: 1;
   border: none;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 20px;
   outline: none;
   font-size: 18px;
 }
@@ -92,43 +92,90 @@ main {
   font-size: 17px;
 }
 
+/*Card boards inthe front page - Start*/
 .card-readers {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 20px; /* Added padding for better spacing */
 }
 
 .card {
-  background-color: #afb2a4;
-  border: 1px solid orange;
-  border-radius: 5px;
-  padding: 15px;
-  width: 200px;
+  background-color: #ffffff; /* Clean white background */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  border-radius: 20px; /* Slightly larger border radius for a modern look */
+  padding: 20px; /* Ample padding for content */
+  width: 220px; /* Slightly wider for better content fit */
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .card img {
   max-width: 100%;
-  height: auto;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 8px; /* Rounded edges for images */
+  margin-bottom: 15px; /* Space between image and text */
 }
 
+.card h3 {
+  margin: 15px 0 10px; /* Adjusted margin for better spacing */
+  font-size: 1.5rem; /* Larger font size for emphasis */
+  color: #2c3e50; /* Dark, sophisticated color for the title */
+  font-weight: 600; /* Semi-bold for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  letter-spacing: -0.5px; /* Slightly tighter letter spacing for a clean look */
+}
+
+.card p {
+  font-size: 1rem; /* Balanced font size for readability */
+  color: #555555; /* Slightly lighter color for contrast */
+  margin: 10px 0; /* Consistent margin for spacing */
+  line-height: 1.5; /* Improved line height for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+  font-weight: 400; /* Regular weight for a clean, professional look */
+}
+/*Card boards inthe front page - End*/
+
+/*The buttons under each card - Start*/
 .actions {
-  margin-top: 10px;
+  margin-top: 15px; /* Increased margin for better spacing */
+  display: flex;
+  justify-content: center; /* Center-align buttons */
+  gap: 10px; /* Consistent spacing between buttons */
 }
 
 .actions a {
   display: inline-block;
-  margin: 5px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
+  padding: 10px 20px; /* Larger padding for better clickability */
+  background-color: #2c3e50; /* Sophisticated dark blue-gray color */
+  color: #ffffff; /* White text for contrast */
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 6px; /* Slightly larger border radius for a modern look */
+  font-size: 0.9rem; /* Appropriate font size */
+  font-weight: 500; /* Medium font weight for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .actions a:hover {
-  background-color: #0206c3;
+  background-color: #004080; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
+
+.actions a:active {
+  transform: translateY(0); /* Reset lift effect when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reset shadow when clicked */
+}
+/*The buttons under each card - End*/
 
 /* Footer Decoration */
 html,
@@ -154,3 +201,89 @@ footer p {
   margin: 0;
 }
 /* End: Footer Decoration */
+
+
+/* Order Now section - Start */
+
+#order-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#order-form .form-group {
+  margin-bottom: 15px;
+}
+
+#order-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/*For Full Name input*/
+#order-form input[type="full-name"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#order-form input[type="full-name"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/*For email input*/
+#order-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#order-form input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#order-form .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#order-form .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+#order-form .btn:active {
+  background-color: #004080;
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Now section - End */
