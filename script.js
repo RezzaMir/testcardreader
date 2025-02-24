@@ -1,13 +1,3 @@
-// Dynamic Year Update in Footer (It must be on top of the script.js, if you relocate it to the bottom, it won't show up.)
-document.addEventListener("DOMContentLoaded", () => {
-  const footerYear = document.getElementById("year");
-  if (footerYear) {
-      footerYear.textContent = new Date().getFullYear();
-  } else {
-      console.log("Element with ID 'year' not found");
-  }
-});
-
 // Order Page Details
 if (window.location.pathname.includes("order.html")) {
   const params = new URLSearchParams(window.location.search);
