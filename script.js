@@ -1,15 +1,12 @@
-// Order Page Details
-if (window.location.pathname.includes("order.html")) {
-  const params = new URLSearchParams(window.location.search);
-  const model = params.get("model");
-
-  const cardDetails = {
-    SP100: { name: "SwiftPay 100", price: "$99.99", business: "Restaurant", image: "card1.jpg"},
-    HPP200: { name: "HealthPay Pro", price: "$149.99", business: "Healthcare", image: "card2.jpg"},
-    PR300: { name: "ProReader 300", price: "$199.99", business: "Professional Services", image: "card3.jpg"},
-    RP400: { name: "RetailPay 400", price: "$129.99", business: "Retail", image: "card4.jpg"},
-    QP500: { name: "QuickPay 500", price: "$89.99", business: "Restaurant", image: "card5.jpg"},
-  };
+    // Dynamic Year Update in Footer (It must be on top of the script.js, if you relocate it to the bottom, it won't show up.)
+document.addEventListener("DOMContentLoaded", () => {
+  const footerYear = document.getElementById("year");
+  if (footerYear) {
+      footerYear.textContent = new Date().getFullYear();
+  } else {
+      console.log("Element with ID 'year' not found");
+  }
+});
 
   // Display the card details on the order page
   if (window.location.pathname.includes("order.html")) {
@@ -32,15 +29,18 @@ if (window.location.pathname.includes("order.html")) {
     });
   }
 
-  // Dynamic Year Update in Footer (It must be on top of the script.js, if you relocate it to the bottom, it won't show up.)
-document.addEventListener("DOMContentLoaded", () => {
-  const footerYear = document.getElementById("year");
-  if (footerYear) {
-      footerYear.textContent = new Date().getFullYear();
-  } else {
-      console.log("Element with ID 'year' not found");
-  }
-});
+// Order Page Details
+if (window.location.pathname.includes("order.html")) {
+  const params = new URLSearchParams(window.location.search);
+  const model = params.get("model");
+
+  const cardDetails = {
+    SP100: { name: "SwiftPay 100", price: "$99.99", business: "Restaurant", image: "card1.jpg"},
+    HPP200: { name: "HealthPay Pro", price: "$149.99", business: "Healthcare", image: "card2.jpg"},
+    PR300: { name: "ProReader 300", price: "$199.99", business: "Professional Services", image: "card3.jpg"},
+    RP400: { name: "RetailPay 400", price: "$129.99", business: "Retail", image: "card4.jpg"},
+    QP500: { name: "QuickPay 500", price: "$89.99", business: "Restaurant", image: "card5.jpg"},
+  };
 
 // Filter and Search Functionality
 document.getElementById("search").addEventListener("input", function () {
