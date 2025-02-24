@@ -1,13 +1,3 @@
-// Dynamic Year Update in Footer (It must be on top of the script.js, if you relocate it to the bottom, it won't show up.)
-document.addEventListener("DOMContentLoaded", () => {
-  const footerYear = document.getElementById("year");
-  if (footerYear) {
-      footerYear.textContent = new Date().getFullYear();
-  } else {
-      console.log("Element with ID 'year' not found");
-  }
-});
-
 // Order Page Details
 if (window.location.pathname.includes("order.html")) {
   const params = new URLSearchParams(window.location.search);
@@ -21,11 +11,10 @@ if (window.location.pathname.includes("order.html")) {
     QP500: { name: "QuickPay 500", price: "$89.99", business: "Restaurant", image: "card5.jpg"},
   };
 
+  // Display the card details on the order page
   if (window.location.pathname.includes("order.html")) {
     const params = new URLSearchParams(window.location.search);
     const model = params.get("model");
-  
-    // Display the card details on the order page
     const details = cardDetails[model];
     if (details) {
       document.getElementById("order-details").innerHTML = `
@@ -36,13 +25,22 @@ if (window.location.pathname.includes("order.html")) {
         <p>Price: ${details.price}</p>
       `;
     }
-  
-    document.getElementById("order-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-      alert(`Order request sent for ${details.name} to ${email}`);
+      document.getElementById("order-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        alert(`Order request sent for ${details.name} to ${email}`);
     });
   }
+
+  // Dynamic Year Update in Footer (It must be on top of the script.js, if you relocate it to the bottom, it won't show up.)
+document.addEventListener("DOMContentLoaded", () => {
+  const footerYear = document.getElementById("year");
+  if (footerYear) {
+      footerYear.textContent = new Date().getFullYear();
+  } else {
+      console.log("Element with ID 'year' not found");
+  }
+});
 
 // Filter and Search Functionality
 document.getElementById("search").addEventListener("input", function () {
