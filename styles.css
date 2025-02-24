@@ -177,6 +177,109 @@ main {
 }
 /*The buttons under each card - End*/
 
+/* Order Now section - Start */
+
+#order-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: orange;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #e67e22;
+}
+
+/* Order Details section - Start */
+#order-details img {
+  max-width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 8px; /* Rounded edges for images */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+/* Style for the card image */
+.card-image {
+  max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto 10rem; /* Centers the image and adds space below it */
+}
+
+#order-details h3 {
+  margin: 15px 0 10px; /* Adjusted margin for better spacing */
+  font-size: 1.5rem; /* Larger font size for emphasis */
+  color: #2c3e50; /* Dark, sophisticated color for the title */
+  font-weight: 600; /* Semi-bold for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  letter-spacing: -0.5px; /* Slightly tighter letter spacing for a clean look */
+  text-align: center; /* Center the text horizontally */
+}
+
+#order-details p {
+  font-size: 1rem; /* Balanced font size for readability */
+  color: #555555; /* Slightly lighter color for contrast */
+  margin: 10px 0; /* Consistent margin for spacing */
+  line-height: 1.5; /* Improved line height for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font family */
+  font-weight: 400; /* Regular weight for a clean, professional look */
+  text-align: center; /* Center the text horizontally */
+}
+
+/* Optional: Set a maximum width for the image */
+.card-image {
+  max-width: 300px; /* Adjust this value as needed */
+}
+
+/* Adjust image size for smaller screens */
+@media (max-width: 600px) {
+  .card-image {
+    max-width: 200px; /* Smaller size for mobile devices */
+  }
+}
+
 /* Footer Decoration */
 html,
 body {
@@ -201,89 +304,3 @@ footer p {
   margin: 0;
 }
 /* End: Footer Decoration */
-
-
-/* Order Now section - Start */
-
-#order-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#order-form .form-group {
-  margin-bottom: 15px;
-}
-
-#order-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #333333;
-}
-
-/*For Full Name input*/
-#order-form input[type="full-name"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-#order-form input[type="full-name"]:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/*For email input*/
-#order-form input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-#order-form input[type="email"]:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-#order-form .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#order-form .btn:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-#order-form .btn:active {
-  background-color: #004080;
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Order Now section - End */
